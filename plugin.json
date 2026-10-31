@@ -1,0 +1,6 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "offer-master",
+  "version": "1.0.0",
+  "description": "Offer Master: diagnose buyer drop-offs, score value levers, rebuild packaging on real proof, cost capped guarantees, and audit honesty into paste-ready offer cards."
+}

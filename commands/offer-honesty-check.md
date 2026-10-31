@@ -1,0 +1,25 @@
+---
+name: offer-honesty-check
+description: Audits an offer or sales page for invented numbers, fake scarcity, unbacked promises, and compliance risks.
+---
+
+Perform an adversarial honesty audit on offer copy, pitch materials, or sales pages.
+
+Use `skills/offer-honesty-check/SKILL.md` and helper script `skills/offer-honesty-check/scripts/flag_claims.py`.
+
+Input: $ARGUMENTS
+
+Procedure:
+1. **Audit Copy for Red Flags**:
+   - Save or pipe the draft copy to `skills/offer-honesty-check/scripts/flag_claims.py copy.txt --facts facts.txt`.
+   - Scan for:
+     - Invented numbers ($X,XXX value tags on commodity PDFs)
+     - Fake scarcity ("only 2 spots left" when delivery is automated)
+     - Unverifiable claims ("guaranteed 10x ROI", "passive income in 14 days")
+     - Stretched testimonials or unattributed results
+2. **Classify Claims**:
+   - **Keep**: Fully verified with direct client facts and dates.
+   - **Fix**: Rephrase with honest qualifiers ("Our client cohort averaged X", "Typical results take Y weeks").
+   - **Cut**: Fabricated figures or manipulative pressure tactics.
+   - **Flag**: Ambiguous statements requiring owner verification before publishing.
+3. **Report**: Deliver a line-by-line audit table and the cleansed, compliant version of the copy.

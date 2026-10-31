@@ -1,0 +1,20 @@
+description = "Sets the honest why now, cost of waiting, sticky naming, and value-based price math. Real deadlines only."
+prompt = '''
+Establish legitimate urgency, quantify the cost of waiting, craft a memorable name, and calculate value-based pricing.
+
+Use `skills/offer-urgency-name-price/SKILL.md` and helper script `skills/offer-urgency-name-price/scripts/price_math.py`.
+
+Input: {{args}}
+
+Procedure:
+1. **Real Urgency**:
+   - Establish legitimate reasons to purchase now (cohort start date, real onboarding bandwidth limit, genuine scheduled price increase, seasonal window).
+   - Prohibit false countdown timers or artificial scarcity.
+2. **Cost of Waiting**:
+   - Run `python3 skills/offer-urgency-name-price/scripts/price_math.py wait --monthly <M> --months <N>` to quantify what delaying fixes costs the buyer in lost money, wasted labor, or accumulated stress.
+3. **Sticky Naming**:
+   - Pick a name that passes the "text test" (a name a buyer would comfortably text a peer). Format: Target + Outcome, or System/Sprint format.
+4. **Value-Based Pricing & Terms**:
+   - Compare price against conservative upside or cost savings using `price_math.py value`.
+   - Calculate payment plan totals with modest finance margins using `price_math.py plan`.
+'''

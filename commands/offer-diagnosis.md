@@ -1,0 +1,19 @@
+---
+name: offer-diagnosis
+description: Finds where buyers drop off and whether it's really the offer (or traffic, product, sales process) from numbers, and decodes objections.
+---
+
+Diagnose where buyers drop off, whether the issue is genuinely the offer, and decode what buyer objections really mean.
+
+Use `skills/offer-diagnosis/SKILL.md` and helper script `skills/offer-diagnosis/scripts/funnel_leak.py`.
+
+Input: $ARGUMENTS
+
+Procedure:
+1. **Rule 1: Is it the offer?**
+   - Check traffic volume. If fewer than 200 views or 10-20 qualified conversations have occurred, flag traffic as the primary constraint before redesigning.
+   - Run `python3 skills/offer-diagnosis/scripts/funnel_leak.py` with stage=count pairs if quantitative funnel data is available.
+   - Identify the single step with the steepest relative drop.
+2. **Rule 2: Decode objections**
+   - Translate common buyer statements ("I'll think about it", "Too expensive", "Can I do it myself?", "I need to ask my partner/boss", "Does this work for my industry?") into their true underlying fear (Belief, Value, Control, or Delivery).
+3. **Verdict**: Issue a concise diagnosis stating whether to fix the offer, drive more traffic, or streamline sales conversations.

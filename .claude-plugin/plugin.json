@@ -1,0 +1,22 @@
+{
+  "name": "offer-master",
+  "version": "1.0.0",
+  "description": "Offer Master: end-to-end framework to diagnose buyer drop-offs, score 4 value levers, rebuild packaging on real proof, cost capped guarantees, and audit honesty into paste-ready offer cards.",
+  "author": {
+    "name": "Via Del Web",
+    "url": "https://github.com/salemaziel"
+  },
+  "homepage": "https://github.com/salemaziel/offer-master-skill",
+  "repository": "https://github.com/salemaziel/offer-master-skill",
+  "license": "MIT",
+  "keywords": [
+    "offers",
+    "sales",
+    "marketing",
+    "copywriting",
+    "pricing",
+    "guarantees",
+    "hormozi",
+    "conversion"
+  ]
+}

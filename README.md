@@ -4,7 +4,13 @@
 
 # Offer Master
 
-A Claude skill that fixes an offer that isn't selling.
+A native multi-agent coding plugin and skill suite that fixes an offer that isn't selling.
+
+Supported coding agents:
+- **Claude Code**: Native plugin with 8 slash commands (`/offer-*`), 2 specialized subagents (`offer-strategist`, `offer-auditor`), and 8 progressive disclosure skills.
+- **OpenAI Codex CLI**: Native plugin with full skill interface catalog and default prompt presets.
+- **Google Antigravity CLI (`agy`) / Gemini CLI**: Native extension with TOML slash commands, `GEMINI.md` context, and mathematical verification scripts.
+- **Hermes Agent**: Skill Bundle conforming to the open `agentskills.io` standard with direct CLI tool execution.
 
 People see the page. Almost nobody buys. The product is usually fine. The offer is what you change.
 
@@ -16,9 +22,9 @@ It finds where buyers drop off, reads what their objections actually mean, and h
 
 The clip is an example. The offer in it is a made-up fitness coach, the same kind of test the skill was judged on. It is a test, and the skill will refuse a refund tied to getting stronger. That line in the picture is an earlier draft.
 
-## Eight skills
+## Eight skills & slash commands
 
-`/offer-master` runs the whole fix and uses the other seven. Each one also works on its own.
+`/offer-master` runs the whole fix and uses the other seven. Each one also works on its own as a native slash command across Claude Code and Antigravity CLI (`agy`).
 
 | Command | What it does |
 |---|---|
@@ -31,28 +37,37 @@ The clip is an example. The offer in it is a made-up fitness coach, the same kin
 | `/offer-honesty-check` | Made-up numbers, fake scarcity, promises you can't back |
 | `/offer-card` | The finished offer, ready to paste |
 
+## Specialized Subagents
+
+- `offer-strategist`: Autonomous commercial strategist for full teardowns, value lever optimization, and offer packaging.
+- `offer-auditor`: Adversarial fact-checker and terms auditor that verifies claims against sources and models guarantee claim exposure.
+
 ## Install
 
-**The one step:** paste this into Claude Code:
+### VDW Marketplace (Claude Code)
 
-```
-https://github.com/Liamrjohnston/offer-master-skill.git
-Clone this and add the skills.
-```
-
-Claude clones the repo and adds the eight skills to your skills folder.
-
-**Or do it yourself:**
+Register the VDW marketplace and install:
 
 ```bash
-git clone https://github.com/Liamrjohnston/offer-master-skill.git
-cd offer-master-skill
-bash install.sh
+claude plugin marketplace add https://github.com/salemaziel/vdw-claude-plugins
+claude plugin install vdw/offer-master
 ```
 
-That copies all eight folders into `~/.claude/skills/`. Start a new Claude Code session afterwards so it picks them up.
+### Multi-Agent Installer (`install.sh`)
 
-> **Note for Claude:** to install these skills, copy every folder under `skills/` that contains a `SKILL.md` into `~/.claude/skills/` (create that folder if needed). There are eight: `offer-master`, `offer-diagnosis`, `offer-levers`, `offer-included`, `offer-guarantee`, `offer-urgency-name-price`, `offer-honesty-check`, `offer-card`. Don't overwrite an existing folder without asking. Then tell the user to start a new session and type `/offer-master`.
+Clone and install to any or all supported coding agents:
+
+```bash
+git clone https://github.com/salemaziel/offer-master-skill.git
+cd offer-master-skill
+bash install.sh --all      # Installs to Claude Code, Codex, Antigravity, and Hermes
+```
+
+Or install to a specific agent:
+- Claude Code: `bash install.sh --claude`
+- OpenAI Codex CLI: `bash install.sh --codex`
+- Google Antigravity / Gemini CLI: `bash install.sh --agy`
+- Hermes Agent: `bash install.sh --hermes`
 
 ## Use it
 

@@ -1,0 +1,40 @@
+{
+  "name": "offer-master",
+  "version": "1.0.0",
+  "description": "Offer Master: end-to-end framework to diagnose buyer drop-offs, score 4 value levers, rebuild packaging on real proof, cost capped guarantees, and audit honesty into paste-ready offer cards.",
+  "author": {
+    "name": "Via Del Web",
+    "url": "https://github.com/salemaziel"
+  },
+  "homepage": "https://github.com/salemaziel/offer-master-skill",
+  "repository": "https://github.com/salemaziel/offer-master-skill",
+  "license": "MIT",
+  "keywords": [
+    "offers",
+    "sales",
+    "marketing",
+    "copywriting",
+    "pricing",
+    "guarantees",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Offer Master",
+    "shortDescription": "Diagnose, rebuild, price, and guarantee honest high-converting offers",
+    "longDescription": "Offer Master fixes offers that aren't selling without hype: finds funnel drop-offs, decodes buyer objections, scores 4 value levers (Result, Belief, Speed, Ease), packages the core promise, costs capped guarantees, calculates real pricing, and audits honesty.",
+    "developerName": "Via Del Web",
+    "category": "Marketing",
+    "capabilities": [
+      "Instructions"
+    ],
+    "websiteURL": "https://github.com/salemaziel/offer-master-skill",
+    "defaultPrompt": [
+      "Diagnose why my offer isn't selling and decode the objections.",
+      "Score my offer across the four value levers (Result, Belief, Speed, Ease).",
+      "Design a fair, capped guarantee and calculate its cost per sale.",
+      "Audit my sales page copy for honesty, fake urgency, and unbacked claims.",
+      "Rebuild my entire offer into a paste-ready offer card."
+    ]
+  }
+}

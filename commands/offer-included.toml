@@ -1,0 +1,16 @@
+description = "Builds the core of an offer on real proof. Writes the one-line promise, week-one win, obstacle-based inclusions, cuts extras, and adds doubt-killing bonuses."
+prompt = '''
+Package the core offer deliverables from actual buyer obstacles and real client proof.
+
+Use `skills/offer-included/SKILL.md`.
+
+Input: {{args}}
+
+Procedure:
+1. **Lead with Proof**: Gather verifiable numbers, before/after states, or verified testimonials. No inventing facts.
+2. **One-Line Promise**: Formulate a crisp headline that names who it is for, the specific result, the timeline, and what risk is removed.
+3. **Week-One Win**: Define the initial deliverable or milestone the buyer receives within the first 7 days to eliminate buyer remorse.
+4. **Obstacle-Based Deliverables**: List every obstacle stopping the buyer from getting the result, and pair each obstacle with an exact component or tool included in the offer.
+5. **Cut the Extras**: Identify bloat (extra modules, irrelevant hours, passive content) that slows down execution or overwhelms the buyer, and ruthlessly trim it.
+6. **Bonuses That Kill Doubts**: Create 1-2 focused bonuses specifically designed to neutralize remaining lingering doubts (e.g. templates, swipe files, implementation reviews).
+'''
